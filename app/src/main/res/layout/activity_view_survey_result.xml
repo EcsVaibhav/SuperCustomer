@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Business.ViewSurveyResult">
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/fixcolor">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="?attr/actionModeCloseDrawable"
+            android:backgroundTint="@color/white" />
+
+        <TextView
+            android:id="@+id/VS_titleTv"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_toRightOf="@id/back"
+            android:gravity="center"
+            android:text="Survey Title"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/Ccard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="20dp">
+
+        <TextView
+            android:id="@+id/SAcount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="Submitted Survey : 0/0"
+            android:textSize="24sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/VsurveyRvl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/Ccard" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/VS_titleTv"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/Ccard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+
+                <TextView
+                    android:id="@+id/SAcount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:gravity="center"
+                    android:text="Submitted Survey : 0/0"
+                    android:textSize="24sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="2dp">
+
+                    <RelativeLayout
+                        android:id="@+id/Q1RVl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/etbox2"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/VS_q1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:text="Question 1"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/VS_q1"
+                            android:layout_margin="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/VSQ1_Y"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Yes 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ1_N"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="No 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ1_MB"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Maybe 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/Q2RVl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/etbox2"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/VS_q2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:text="Question 2"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/VS_q2"
+                            android:layout_margin="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/VSQ2_Y"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Yes 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ2_N"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="No 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ2_MB"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Maybe 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/Q3RVl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/etbox2"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/VS_q3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:text="Question 3"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/VS_q3"
+                            android:layout_margin="5dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/VSQ3_Y"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Yes 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ3_N"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="No 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ3_MB"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Maybe 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/Q4RVl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/etbox2"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/VS_q4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:text="Question 4"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/VS_q4"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/VSQ4_Y"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Yes 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ4_N"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="No 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ4_MB"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Maybe 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/Q5RVl"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/etbox2"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:id="@+id/VS_q5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center|start"
+                            android:text="Question 5"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/VS_q5"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/VSQ5_Y"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Yes 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ5_N"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="No 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/VSQ5_MB"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="5dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/etbox2"
+                                android:gravity="center"
+                                android:padding="5dp"
+                                android:text="Maybe 0%"
+                                android:textColor="@android:color/holo_green_dark"
+                                android:textSize="20sp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

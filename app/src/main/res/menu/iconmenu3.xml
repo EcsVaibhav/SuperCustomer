@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_user_scan"
+        android:icon="@drawable/baseline_qr_code_scanner_24"
+        android:title="Home"/>
+
+    <item android:id="@+id/menu_user_offers"
+        android:icon="@drawable/baseline_account_circle_24"
+        android:title="My Offers"/>
+
+    <item android:id="@+id/menu_user_Survey"
+        android:icon="@drawable/ic_baseline_email_24"
+        android:title="Unlock Offers"/>
+
+    <item android:id="@+id/menu_Rewards"
+        android:icon="@drawable/baseline_card_giftcard_24"
+        android:title="Reward Points"/>
+
+    <item android:id="@+id/menu_logout"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="LogOut"/>
+
+
+</menu>

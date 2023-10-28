@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_standard"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/spacing_standard"
+            android:layout_marginBottom="@dimen/spacing_control"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/t1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/etbox2"
+                android:gravity="center"
+                android:paddingStart="5sp"
+                android:paddingTop="5sp"
+                android:paddingEnd="5sp"
+                android:paddingBottom="5sp" />
+
+            <EditText
+                android:id="@+id/e1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/etbox2"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center"
+                android:inputType="number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ValidateLy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_standard"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/spacing_standard"
+            android:layout_marginBottom="@dimen/spacing_control"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/ValidateTV"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:padding="5dp"
+                android:text="Off upto"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/ValidateET"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_control"
+                android:layout_marginTop="0dp"
+                android:layout_weight="1"
+                android:background="@drawable/etbox2"
+                android:fontFamily="@font/montserrat"
+                android:inputType="number"
+                android:paddingStart="5sp"
+                android:paddingTop="5sp"
+                android:paddingEnd="5sp"
+                android:paddingBottom="5sp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/spacing_standard"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="@dimen/spacing_standard"
+            android:layout_marginBottom="@dimen/spacing_control"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/t3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/montserrat"
+                android:gravity="center_vertical"
+                android:text="Minimum Purchase Of"
+                android:textColor="@color/colorPrimary"
+                android:textSize="17sp" />
+
+            <EditText
+                android:id="@+id/e3"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/spacing_control"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/etbox2"
+                android:fontFamily="@font/montserrat"
+                android:inputType="number"
+                android:paddingStart="5sp"
+                android:paddingTop="5sp"
+                android:paddingEnd="5sp"
+                android:paddingBottom="5sp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/fixcolor"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="@color/fixcolor"
+                android:text="Save"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

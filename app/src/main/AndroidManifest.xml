@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name=".Privacy_policy"
+            android:exported="false" />
+        <activity
+            android:name=".Business.BMyBills"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_report"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.All_Business_bills"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_report_bill"
+            android:exported="false" />
+        <activity
+            android:name=".Business.BDash"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+        <activity
+            android:name=".User.Congratulation_forCoupan"
+            android:exported="false" />
+        <activity
+            android:name=".User.Congratulation_forScanqr"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserRewards"
+            android:exported="false" />
+        <activity
+            android:name=".Business.ExpSurvey"
+            android:exported="false" />
+        <activity
+            android:name=".Business.ChooseSurvey"
+            android:exported="false" />
+        <activity
+            android:name=".User.USubmitSurvey"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserNotification"
+            android:exported="false" />
+        <activity
+            android:name=".Business.ViewSurveyResult"
+            android:exported="false" />
+        <activity
+            android:name=".Business.All_survey"
+            android:exported="false" />
+        <activity
+            android:name=".Business.B_send_survey"
+            android:exported="false" />
+        <activity
+            android:name=".Business.Create_survey"
+            android:exported="false" />
+        <activity
+            android:name=".Business.AllCustomers"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserOffers"
+            android:exported="false" />
+        <activity
+            android:name=".Business.BDashboard"
+            android:exported="true" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Business.SendOffer"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Business.EditOffer"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".Business.AllCoupons"
+            android:exported="false" />
+        <activity
+            android:name=".Business.CreateOffer"
+            android:exported="false" />
+        <activity
+            android:name=".Business.BussinessSetting"
+            android:exported="false" />
+        <activity
+            android:name=".User.UserQrScan"
+            android:exported="false" />
+        <activity
+            android:name=".CaptureAct"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Admin.AllAcounts"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.ActiveDeactive"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.BussinessRegistration"
+            android:exported="false" />
+        <activity
+            android:name=".OTP"
+            android:exported="false" />
+        <activity
+            android:name=".Login"
+            android:exported="false" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

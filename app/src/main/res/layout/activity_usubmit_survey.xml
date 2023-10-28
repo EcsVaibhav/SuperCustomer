@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainRVL"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/sTitile_tv"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@color/fixcolor"
+        android:gravity="center"
+        android:text="SurveyTitle"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:id="@+id/USsurveyscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/submitSurveyBtn"
+        android:layout_below="@id/sTitile_tv"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/Q1RVL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_que1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Question no 1"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQueNo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_que1"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/que1YESradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="YES"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/que1NOradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="NO"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/que1MAYBEradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="MAYBE"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Q2RVL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_que2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Question no 2"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQueNo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_que2"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:gravity="center">
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que2YESradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="YES"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que2NOradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="NO"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que2MAYBEradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="MAYBE"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Q3RVL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_que3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Question no 3"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQueNo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_que3"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/que3YESradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="YES"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <RadioButton
+                        android:id="@+id/que3NOradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="NO"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que3MAYBEradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="MAYBE"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Q4RVL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_que4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Question no 4"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQueNo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_que4"
+                    android:layout_gravity="center"
+                    android:layout_margin="5dp"
+                    android:gravity="center">
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que4YESradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="YES"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que4NOradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="NO"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que4MAYBEradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="MAYBE"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Q5RVL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_que5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:text="Question no 5"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupQueNo5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_que5"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center">
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que5YESradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="YES"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que5NOradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="NO"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                    <!--adding a radio button -->
+                    <RadioButton
+                        android:id="@+id/que5MAYBEradio"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:checked="false"
+                        android:padding="4dp"
+                        android:text="MAYBE"
+                        android:textAlignment="center"
+                        android:textSize="20sp" />
+
+                </RadioGroup>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/submitSurveyBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/fixcolor"
+        android:text="Submit"
+        android:textColor="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/USS_rvl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/submitSurveyBtn"
+        android:layout_below="@id/sTitile_tv" />
+
+    <ProgressBar
+        android:id="@+id/progressBarsurveySubmit"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>

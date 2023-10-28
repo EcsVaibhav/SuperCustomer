@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/childARrvl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".Admin.Admin_report">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:id="@+id/ABnameTV"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Business 1" />
+
+        <TextView
+            android:id="@+id/JanData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Jan" />
+
+        <TextView
+            android:id="@+id/FebData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Feb" />
+
+        <TextView
+            android:id="@+id/MarData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Mar" />
+
+        <TextView
+            android:id="@+id/AprData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Apr" />
+
+        <TextView
+            android:id="@+id/MayData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for May" />
+
+        <TextView
+            android:id="@+id/JunData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Jun" />
+
+        <TextView
+            android:id="@+id/JulData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Jul" />
+
+        <TextView
+            android:id="@+id/AugData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Aug" />
+
+        <TextView
+            android:id="@+id/SepData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Sep" />
+
+        <TextView
+            android:id="@+id/OctData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Oct" />
+
+        <TextView
+            android:id="@+id/NovData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Nov" />
+
+        <TextView
+            android:id="@+id/DecData"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Value for Dec" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

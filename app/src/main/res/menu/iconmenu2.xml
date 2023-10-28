@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menu_bussiness_dashboard"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Dashboard"/>
+
+    <item android:id="@+id/menu_bussiness_settings"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="Bussiness Settings"/>
+
+    <item android:id="@+id/menu_coupons"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="All Coupons"/>
+
+    <item android:id="@+id/menu_customers"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="All Customers"/>
+
+    <item android:id="@+id/menu_Survey"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="All Survey"/>
+
+    <item android:id="@+id/menu_Mybill"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="My Bills"/>
+
+    <item android:id="@+id/menu_logout"
+        android:icon="@drawable/ic_baseline_logout_24"
+        android:title="LogOut"/>
+
+
+</menu>
