@@ -104,6 +104,7 @@ public class B_bill_Adapter extends RecyclerView.Adapter<B_bill_Adapter.Viewhold
                         @Override
                         public void onResponse(String response) {
 
+                            Log.e("response",response);
                             if (!(response.equals("inserted"))){
                                 Toast.makeText(context, "Something went wrong try later..", Toast.LENGTH_SHORT).show();
                             }

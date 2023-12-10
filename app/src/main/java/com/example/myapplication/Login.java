@@ -4,6 +4,7 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -37,14 +38,18 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.myapplication.Admin.BussinessRegistration;
 import com.example.myapplication.Business.BDashboard;
+import com.example.myapplication.Model.OTPmodel;
 import com.example.myapplication.User.UserQrScan;
 
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Random;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
@@ -95,8 +100,11 @@ public class Login extends AppCompatActivity {
 
                             closeKeyboard();
                             LoginValidation(mobileNumber);
-                            /*button.setVisibility(View.VISIBLE);
-                            progressBar.setVisibility(View.GONE);*/
+
+
+                            //SendOTP(mobileNumber);
+
+
                         }
                     },1000);
 
@@ -139,6 +147,66 @@ public class Login extends AppCompatActivity {
                 startActivity(new Intent(Login.this,Privacy_policy.class));
             }
         });
+    }
+
+
+    private void SendOTP(String mobile) {
+
+
+        Random r  = new Random();
+        String Sotp = String.valueOf(r.nextInt(900000) + 100000);
+
+        String msg = "your otp is "+Sotp+" Info sms";
+        StringRequest request = new StringRequest(Request.Method.GET, "http://146.88.24.105:8080/api/mt/SendSMS?user=piyushmore&password=12345&number="+mobile+"&text="+msg+"&senderid=INFMTN&channel=Trans&DCS=0&flashsms=0", new com.android.volley.Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+
+                try {
+                    JSONObject o = new JSONObject(response);
+                    String status = o.getString("ErrorMessage");
+
+                    if (status.equals("Done")) {
+
+                        Intent intent = new Intent(Login.this, OTP.class);
+                        intent.putExtra("Mobile", mobile);
+                        intent.putExtra("Otp", Sotp);
+                        startActivity(intent);
+                        finish();
+                    }else {
+
+                        Toast.makeText(Login.this, "Something went wrong try later..", Toast.LENGTH_SHORT).show();
+                        button.setVisibility(View.VISIBLE);
+                        progressBar.setVisibility(View.GONE);
+
+                    }
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+
+                    Toast.makeText(Login.this, "Something went wrong try later..", Toast.LENGTH_SHORT).show();
+                    button.setVisibility(View.VISIBLE);
+                    progressBar.setVisibility(View.GONE);
+                }
+
+            }
+        }, new com.android.volley.Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Toast.makeText(Login.this, "Technical error try after some time", Toast.LENGTH_SHORT).show();
+                button.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.GONE);
+            }
+        });
+
+        RequestQueue queue = Volley.newRequestQueue(Login.this);
+        queue.add(request);
+
+
+
+
+
+
+
     }
     private void designPolicyText(){
 

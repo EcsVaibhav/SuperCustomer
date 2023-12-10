@@ -31,6 +31,7 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.myapplication.Adapter.UserOffersAdapter;
 import com.example.myapplication.Business.AllCustomers;
@@ -63,6 +64,8 @@ public class UserOffers extends AppCompatActivity {
     ProgressDialog progressDialog;
     RecyclerView recyclerView;
     UserOffersAdapter adapter3;
+
+    SwipeRefreshLayout refresh;
     List<UserOffersModel> findModels;
 
     @SuppressLint("MissingInflatedId")
@@ -74,6 +77,8 @@ public class UserOffers extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         nav = findViewById(R.id.nav);
+
+        refresh = findViewById(R.id.refresh);
 
         actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, toolbar, R.string.nav_open, R.string.nav_close);
 
@@ -156,6 +161,15 @@ public class UserOffers extends AppCompatActivity {
 
                 filterList(newText);
                 return false;
+            }
+        });
+
+        refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                findModels.clear();
+                new Load().execute();
+                refresh.setRefreshing(false);
             }
         });
 

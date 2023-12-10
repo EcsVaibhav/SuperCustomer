@@ -10,6 +10,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
@@ -60,6 +61,7 @@ public class UserNotification extends AppCompatActivity {
     public Toolbar toolbar;
     RecyclerView allSurveyRVL;
     ProgressBar pBar_usernotification;
+    SwipeRefreshLayout refresh;
     ArrayList<AllSurveyBmodel> allSurveyBmodels;
 
     @SuppressLint("MissingInflatedId")
@@ -73,6 +75,7 @@ public class UserNotification extends AppCompatActivity {
         setSupportActionBar(toolbar);
         nav = findViewById(R.id.nav);
         allSurveyRVL = findViewById(R.id.All_survey_User_rvl);
+        refresh = findViewById(R.id.refresh);
 
 
         allSurveyBmodels = new ArrayList<>();
@@ -139,6 +142,14 @@ public class UserNotification extends AppCompatActivity {
         TextView navName = headview.findViewById(R.id.navName);
         navName.setText("Profile ID :"+getIntent().getStringExtra("NavName"));
 
+        refresh.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                allSurveyBmodels.clear();
+                fetchData();
+                refresh.setRefreshing(false);
+            }
+        });
         fetchData();
 
 

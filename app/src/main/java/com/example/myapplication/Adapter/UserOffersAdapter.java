@@ -103,7 +103,7 @@ public class UserOffersAdapter extends RecyclerView.Adapter<UserOffersAdapter.Vi
         builder.setTitle("Terms and Conditions");
         builder.setMessage("1. The offer or coupon is provided by the mentioned outlet on coupon or offer.\n" +
                 "2. The offer or coupon can not be clubbed together with any other offer or coupon.\n" +
-                "3. The offer provider outlet  is entitled unconditionally to modify, accept or reject any offer,coupon without any prior notification.");
+                "3. The offer provider outlet reserves its absolute right to accept or reject any offer,coupon at any time without any prior notification.");
         builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
